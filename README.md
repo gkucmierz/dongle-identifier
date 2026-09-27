@@ -21,14 +21,19 @@ Have too many identical black USB dongles from different mice and keyboards? Thi
 
 ## Configuration
 
-Open `identify.js` and populate the `KNOWN_DONGLES` object with your devices:
+Create your private `known_dongles.json` (ignored by git, template available in `known_dongles.example.json`):
 
-```javascript
-const KNOWN_DONGLES = {
+```bash
+cp known_dongles.example.json known_dongles.json
+```
+
+Populate `known_dongles.json` with your devices:
+
+```json
+{
   "0x248a:0x8208": "XQUANTUM WK500K Keyboard",
-  "0x046d:0xc52b": "Logitech Unifying Receiver",
-  // Add your dongles here...
-};
+  "0x046d:0xc52b": "Logitech Unifying Receiver"
+}
 ```
 
 ## Requirements
